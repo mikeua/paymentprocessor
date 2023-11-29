@@ -1,0 +1,66 @@
+@ipad: ~'only screen and (min-width: 768px) and (max-width: 1024px)';
+@mobile: ~'only screen and (max-width: 767px)';
+
+.payment-method {
+    #paymentprocessor_cc_type_cvv_div {
+        .control._with-tooltip {
+            display: inline-block;
+            width: 200px;
+        }
+    }
+    label[data-ifields-id='card-data-error'] {
+        display: none;
+    }
+}
+.checkout-payment-method {
+    .messages {
+        display: block !important;
+    }
+}
+
+@media @ipad {
+    .field-tooltip {
+        .field-tooltip-content {
+            left: auto;
+            right: -96px !important;
+            top: 40px;
+            &:before,
+            &:after {
+                border: 10px solid transparent;
+                height: 0;
+                left: auto;
+                margin-top: -21px;
+                right: 100px !important;
+                top: 0;
+                width: 0;
+            }
+        }
+    }
+}
+
+@media @mobile {
+    .field-tooltip {
+        .field-tooltip-content {
+            left: auto;
+            right: -97px !important;
+            top: 40px;
+
+            &:before,
+            &:after {
+                border: 10px solid transparent;
+                height: 0;
+                left: auto;
+                margin-top: -21px;
+                right: 100px !important;
+                top: 0;
+                width: 0;
+            }
+        }
+    }
+    .payment-method #paymentprocessor_cc_type_cvv_div .control._with-tooltip iframe {
+        position: relative;
+        width: 155px;
+        z-index: 1;
+    }
+}
+

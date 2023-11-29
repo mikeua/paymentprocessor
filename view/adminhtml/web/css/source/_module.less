@@ -1,0 +1,64 @@
+@color-white: #fff;
+@color-light-grey: #adadad;
+@color-grey: #514943;
+
+.admin__control-radio {
+    + script + .admin__field-label {
+        box-sizing: border-box;
+        cursor: pointer;
+        padding-left: 2.6rem;
+        position: relative;
+        &:before {
+            background-color: @color-white;
+            border-radius: 1.6rem;
+            border: 1px solid @color-light-grey;
+            color: transparent;
+            content: '';
+            float: left;
+            height: 1.6rem;
+            line-height: 140%;
+            margin: 1px 1rem 0 -2.6rem;
+            text-align: center;
+            transition: border-color 0.1s linear, color 0.1s ease-in;
+            vertical-align: top;
+            width: 1.6rem;
+        }
+    }
+    &:checked {
+        + script + .admin__field-label {
+            &:before {
+                color: @color-grey;
+            }
+            &:after {
+                background-color: @color-grey;
+                border-radius: 50%;
+                content: '';
+                height: 10px;
+                left: 3px;
+                position: absolute;
+                top: 4px;
+                width: 10px;
+            }
+        }
+    }
+}
+.admin__payment-method-wrapper {
+    .admin__field {
+        .vault {
+            margin-top:20px;
+        }
+    }
+}
+
+#paymentprocessor_expiration {
+    max-width: 60%;
+}
+
+#paymentprocessor_vault_enabler {
+    .label {
+        line-height: 1.3;
+        span {
+            margin-left: 10px;
+        }
+    }
+}

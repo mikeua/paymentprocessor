@@ -1,0 +1,41 @@
+<div class="payment-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <label id="payment-credit" data-bind="attr: {'for': getCode()}" class="label">
+            <span data-bind="text: getTitle()"></span>
+        </label>
+    </div>
+    <div class="payment-method-content">
+        <!-- ko foreach: getRegion('messages') -->
+        <!-- ko template: getTemplate() -->
+        <!-- /ko -->
+        <!--/ko-->
+        <form class="form" data-bind="attr: {'id': getCode() + '-form'}">
+            <!-- ko template: 'Magento_Payment/payment/cc-form' -->
+            <!-- /ko -->
+            <label id="transaction-status" class="label"></label>
+            <!-- ko if: (isVaultEnabled()) -->
+            <div class="field choice">
+                <input type="checkbox"
+                       name="vault[is_enabled]"
+                       class="checkbox"
+                       data-bind="attr: {'id': getCode() + '_enable_vault'}, checked: vaultEnabler.isActivePaymentTokenEnabler">
+                <label class="label" data-bind="attr: {'for': getCode() + '_enable_vault'}">
+                    <span><!-- ko i18n: 'Save for later use.'--><!-- /ko --></span>
+                </label>
+            </div>
+            <!-- /ko -->
+        </form>
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: $parent.getRegion('before-place-order') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="payment-method-toolbar">
+            <p><span data-bind="click: deselectPaymentMethod" ><!-- ko i18n:'CHANGE' --><!-- /ko --></span></p>
+        </div>
+    </div>
+</div>

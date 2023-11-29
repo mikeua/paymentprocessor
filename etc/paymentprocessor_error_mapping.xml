@@ -1,0 +1,36 @@
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Payment:etc/error_mapping.xsd">
+    <message_list>
+        <message code="200" translate="true">Transaction was declined by processor</message>
+        <message code="201" translate="true">Do not honor</message>
+        <message code="202" translate="true">Insufficient funds</message>
+        <message code="203" translate="true">Over limit</message>
+        <message code="204" translate="true">Transaction not allowed</message>
+        <message code="220" translate="true">Incorrect payment information</message>
+        <message code="221" translate="true">No such card issuer</message>
+        <message code="222" translate="true">No card number on file with issuer</message>
+        <message code="223" translate="true">Expired card</message>
+        <message code="224" translate="true">Invalid expiration date</message>
+        <message code="225" translate="true">Invalid card security code</message>
+        <message code="226" translate="true">Invalid PIN</message>
+        <message code="240" translate="true">Call issuer for further information</message>
+        <message code="250" translate="true">Pick up card</message>
+        <message code="251" translate="true">Lost card</message>
+        <message code="252" translate="true">Stolen card</message>
+        <message code="253" translate="true">Fraudulent card</message>
+        <message code="260" translate="true">Declined with further instructions available</message>
+        <message code="261" translate="true">Declined-Stop all recurring payments</message>
+        <message code="262" translate="true">Declined-Stop this recurring program</message>
+        <message code="263" translate="true">Declined-Update cardholder data available</message>
+        <message code="300" translate="true">Transaction was rejected by gateway</message>
+        <message code="400" translate="true">Transaction error returned by processor</message>
+        <message code="410" translate="true">Invalid merchant configuration</message>
+        <message code="411" translate="true">Merchant account is inactive</message>
+        <message code="420" translate="true">Communication error</message>
+        <message code="421" translate="true">Communication error with issuer</message>
+        <message code="430" translate="true">Duplicate transaction at processor</message>
+        <message code="440" translate="true">Processor format error</message>
+        <message code="441" translate="true">Invalid transaction information</message>
+        <message code="460" translate="true">Processor feature not available</message>
+        <message code="461" translate="true">Unsupported card type</message>
+    </message_list>
+</mapping>
